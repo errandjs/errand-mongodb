@@ -1,0 +1,28 @@
+{
+  "name": "errand-mongodb",
+  "version": "0.1.1",
+  "description": "errand component for working with mongodb",
+  "main": "lib/errand-logger.js",
+  "dependencies": {
+    "async": "^2.5.0",
+    "kue": "^0.11.6",
+    "mongodb": "^2.2.30"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/errandjs/errand-mongodb.git"
+  },
+  "author": "mattcam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/errandjs/errand-mongodb/issues"
+  },
+  "keywords": [
+    "errand"
+  ],
+  "homepage": "https://github.com/errandjs/errand-mongodb#readme"
+}

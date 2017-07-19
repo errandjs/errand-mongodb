@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    {
+      "task": "errand-mongodb",
+      "data": {
+        "description": "replace-with-task-description",
+        "request": {
+          "database": "errand_test",
+          "collection": "orders",
+          "method": "aggregate",
+          "parameters": {
+            "pipeline": [
+              { "$match": { "status": "A" } },
+              { "$group": { "_id": "$cust_id", "total": { "$sum": "$amount" } } },
+              { "$sort": { "total": -1 } },
+              { "$out": "errand_group_by_and_sum" }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
