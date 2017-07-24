@@ -71,7 +71,10 @@ Notes:
 							{ "$group": { "_id": "$cust_id", "total": { "$sum": "$amount" } } },
 							{ "$sort": { "total": -1 } },
 							{ "$out": "errand_aggregate_test_result" }
-						]
+						],
+                        "helpers": [
+                            { "created_at": "lastday" }
+                        ]
 					}
 				}
 			}
@@ -83,5 +86,6 @@ Notes:
 
 Notes:
 
-* For source data refer to [group by and calculate a sum example in mongodb db.collection.aggregate() documentation](https://docs.mongodb.com/manual/reference/method/db.collection.aggregate/#db.collection.aggregate)
-* When run collection `errand_aggregate_test_result` will be replaced with result
+* **tasks[].data.request.parameters.pipeline** - for pipeline source data refer to [group by and calculate a sum example in mongodb db.collection.aggregate() documentation](https://docs.mongodb.com/manual/reference/method/db.collection.aggregate/#db.collection.aggregate). Note that in this case with `$out` collection `errand_aggregate_test_result` will be replaced with result.
+* **tasks[].data.request.parameters.helpers** - used to add helpers to beginning of aggregate pipeline where, each object consists of `key` and `value` where key contains name of field to apply function in value. Helper functions include:
+  * **lastday** - is used to add date range for matching records from the previous day.
