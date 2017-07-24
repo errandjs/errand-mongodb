@@ -72,9 +72,9 @@ Notes:
 							{ "$sort": { "total": -1 } },
 							{ "$out": "errand_aggregate_test_result" }
 						],
-                        "helpers": [
-                            { "created_at": "lastday" }
-                        ]
+						"helpers": [
+							{ "created_at": "lastday" }
+						]
 					}
 				}
 			}
