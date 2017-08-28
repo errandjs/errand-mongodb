@@ -1,6 +1,6 @@
 {
   "name": "errand-mongodb",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "errand component for working with mongodb",
   "main": "lib/errand-logger.js",
   "dependencies": {
