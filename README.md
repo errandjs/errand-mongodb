@@ -89,7 +89,7 @@ Notes:
   * **lastday** - is used to add date range for matching records from the previous day.
 	* **lastweek** - is used to add date range for matching records from the previous week.
 
-	### db.collection.createIndex Example
+### db.collection.createIndex Example
 
 
 	```
@@ -118,7 +118,7 @@ Notes:
 
 	Notes:
 
-  * Refer to [db.collection.createIndex()](https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/)	
+  * Refer to [db.collection.createIndex()](https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/)
 	* **tasks[].data.request.parameters.database** - mongodb database name
 	* **tasks[].data.request.parameters.collection** - mongodb collection name
 	* **tasks[].data.request.parameters.keys** - db.collection.createIndex() keys
