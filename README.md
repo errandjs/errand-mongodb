@@ -92,7 +92,7 @@ Notes:
 ### db.collection.createIndex Example
 
 
-	```
+```
 
 	{
 		"tasks": [
@@ -114,12 +114,12 @@ Notes:
 		]
 	}
 
-	```
+```
 
-	Notes:
+Notes:
 
-  * Refer to [db.collection.createIndex()](https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/)
-	* **tasks[].data.request.parameters.database** - mongodb database name
-	* **tasks[].data.request.parameters.collection** - mongodb collection name
-	* **tasks[].data.request.parameters.keys** - db.collection.createIndex() keys
-	* **tasks[].data.request.parameters.options** - db.collection.createIndex() options
+* Refer to [db.collection.createIndex()](https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/)
+* **tasks[].data.request.parameters.database** - mongodb database name
+* **tasks[].data.request.parameters.collection** - mongodb collection name
+* **tasks[].data.request.parameters.keys** - db.collection.createIndex() keys
+* **tasks[].data.request.parameters.options** - db.collection.createIndex() options
