@@ -84,7 +84,7 @@ Notes:
 
 * **tasks[].data.request.parameters.database** - mongodb database name
 * **tasks[].data.request.parameters.collection** - mongodb collection name
-* **tasks[].data.request.parameters.pipeline** - for pipeline source data refer to [group by and calculate a sum example in mongodb db.collection.aggregate() documentation](https://docs.mongodb.com/manual/reference/method/db.collection.aggregate/#db.collection.aggregate). Note that in this case with `$out` collection `errand_aggregate_test_result` will be replaced with result.
+* **tasks[].data.request.parameters.pipeline** - for pipeline source data refer to [group by and calculate a sum example in mongodb db.collection.aggregate() documentation](https://docs.mongodb.com/manual/reference/method/db.collection.aggregate/#db.collection.aggregate). Note that in this case with `$out` collection `errand_aggregate_test_result` will be replaced with result. [replaceKeywords function](#replacekeywords-function) is applied to all pipeline.
 * **tasks[].data.request.parameters.helpers** - used to add helpers to beginning of aggregate pipeline where, each object consists of `key` and `value` where key contains name of field to apply function in value. Helper functions include:
   * **lastday** - is used to add date range for matching records from the previous day.
 	* **lastweek** - is used to add date range for matching records from the previous week.
@@ -123,3 +123,13 @@ Notes:
 * **tasks[].data.request.parameters.collection** - mongodb collection name
 * **tasks[].data.request.parameters.keys** - db.collection.createIndex() keys
 * **tasks[].data.request.parameters.options** - db.collection.createIndex() options
+
+## replaceKeywords function
+
+The replaceKeywords function is used to replace keywords with variables. Date based keywords replace the entire variable.
+
+### replaceKeywords keywords
+
+* `{{_date_minus1_startOf}}` replaced with start of yesterday, or `new Date(moment().add(-1, 'days').startOf('day')))`
+* `{{_date_minus8_startOf}}` replaced with start of 8 days ago, or `new Date(moment().add(-8, 'days').startOf('day')))`
+* `{{_date_minus1_endOf}}` replaced with end of yesterday, or `new Date(moment().add(-1, 'days').endOf('day')))`
